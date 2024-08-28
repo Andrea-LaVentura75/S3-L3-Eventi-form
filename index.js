@@ -1,33 +1,32 @@
 const form = document.querySelector("form");
 const containerActivities = document.querySelector(".conteiner-activities");
-const button = document.querySelector("button[type='submit']");
 
 form.onsubmit = function (event) {
   event.preventDefault();
   let inputActivities = document.querySelector(".activities-add");
   let attivitaAggiunta = inputActivities.value;
   if (attivitaAggiunta !== "") {
-    button.onclick = function () {
-      let contenitoreProva = document.createElement("div");
-      contenitoreProva.style.borderBottom = "solid";
-      contenitoreProva.style.display = "flex";
-      contenitoreProva.style.alignItems = "center";
-      let checkbox = document.createElement("button");
-      checkbox.innerText = "🗑️";
+    let contenitoreProva = document.createElement("div");
+    contenitoreProva.style.borderBottom = "solid";
+    contenitoreProva.style.display = "flex";
+    contenitoreProva.style.alignItems = "center";
 
-      let attivita = document.createElement("p");
-      attivita.textContent = attivitaAggiunta;
+    let checkbox = document.createElement("button");
+    checkbox.innerText = "🗑️";
 
-      contenitoreProva.append(checkbox, attivita);
-      containerActivities.append(contenitoreProva);
+    let attivita = document.createElement("p");
+    attivita.textContent = attivitaAggiunta;
 
-      checkbox.onclick = function () {
-        attivita.style.textDecoration = "line-through";
-        attivita.remove();
-        checkbox.remove();
-        contenitoreProva.style.borderBottom = "";
-      };
+    contenitoreProva.append(checkbox, attivita);
+    containerActivities.append(contenitoreProva);
+
+    checkbox.onclick = function () {
+      attivita.style.textDecoration = "line-through";
+      attivita.remove();
+      checkbox.remove();
+      contenitoreProva.style.borderBottom = "";
     };
+    inputActivities.value = "";
   } else {
     alert("Ciao inserisci prima le tue cose da fare :)");
   }
