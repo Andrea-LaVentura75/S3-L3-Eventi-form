@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  max-width: 500px;
+  margin-inline: auto;
+  background-image: url("./img/Black\ Grunge\ Background\ Instagram\ Story\ \(1\).png");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+}
+
+.input-container {
+  text-align: center;
+}
+.input-container h1 {
+  color: white;
+}
+.input-container input {
+  font-family: "Roboto", sans-serif;
+}
+.input-container button {
+  font-family: "Roboto", sans-serif;
+  background-color: grey;
+  color: white;
+  border: 108px;
+  border-radius: 5px;
+  padding: 2px;
+  width: 5.5em;
+}
+.input-container .activities-add {
+  width: 70%;
+}
+
+.conteiner-activities input {
+  margin-bottom: 0;
+}
+.conteiner-activities p {
+  margin-bottom: 10px;
+}
